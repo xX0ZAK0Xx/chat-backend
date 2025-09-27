@@ -1,5 +1,5 @@
 const loginController = (req, res) => {
-    res.render("index");
+    res.status(200).json({message: "Login"});
 }
 
 export { loginController };

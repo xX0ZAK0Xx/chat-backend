@@ -1,5 +1,7 @@
 const inboxController = (req, res) => {
-    res.render("inbox");
+    res.status(200).json({
+        message: "Chat Inbox"
+    });
 }
 
 export { inboxController };
