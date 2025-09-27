@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "cross-env NODE_ENV=development nodemon index.js",
+    "prod": "cross-env NODE_ENV=production node index.js"
   },
   "repository": {
     "type": "git",
@@ -29,5 +29,8 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.18.2",
     "multer": "^2.0.2"
+  },
+  "devDependencies": {
+    "cross-env": "^10.0.0"
   }
 }
