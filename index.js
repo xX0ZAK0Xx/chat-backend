@@ -9,7 +9,7 @@ import cookieParser from "cookie-parser";
 // import modules: internal
 import { notFound, errorHandler } from "./middlewares/common/errorHandler.js";
 import loginRouter from "./router/loginRouter.js";
-import inboxRouter from "./router/inboxRouter.js";
+import chatRouter from "./router/chatRouter.js";
 import usersRouter from "./router/usersRouter.js";
 
 // fix __dirname in ES module
@@ -38,7 +38,7 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 
 // routing
 app.use("/", loginRouter);
-app.use("/inbox", inboxRouter);
+app.use("/chat", chatRouter);
 app.use("/users", usersRouter);
 
 // error handling
