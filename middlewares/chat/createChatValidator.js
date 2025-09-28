@@ -1,6 +1,8 @@
 import { check, validationResult } from "express-validator";
 
-const createChatValidator = [];
+const createChatValidator = [
+    check("receiverId").not().isEmpty().withMessage("Receiver id is required").isMongoId().withMessage("Invalid receiver id")
+];
 
 const createChatValidationHandler = (req, res, next) => {
     const errors = validationResult(req);

@@ -19,6 +19,6 @@ router.get("/", validateToken, getAllChats);
 router.get("/:id", validateToken, getMessages);
 
 // send message
-router.post("/:id", validateToken, sendMessageValidator, sendMessageValidationHandler, sendMessage);
+router.post("/:id", validateToken, chatAttachmentUploader, sendMessageValidator, sendMessageValidationHandler, sendMessage);
 
 export default router;
