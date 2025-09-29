@@ -22,7 +22,7 @@ const app = express();
 dotenv.config();
 
 // connect socket
-const io = new Server(server, { cors: { origin: "*" } });
+// const io = new Server(server, { cors: { origin: "*" } });
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URL).then(() => {
@@ -51,7 +51,7 @@ app.use(notFound);
 app.use(errorHandler);
 
 // socket handler
-socketHandler(io);
+// socketHandler(io);
 
 // start server
 app.listen(process.env.PORT, () => {

@@ -11,6 +11,7 @@ const router = express.Router();
 
 // start a new chat
 router.post("/", validateToken, createChatValidator, createChatValidationHandler,  startChat);
+// router.post("/", (req, res) => res.send("hello"));
 
 // get all chats
 router.get("/", validateToken, getAllChats);
@@ -19,6 +20,6 @@ router.get("/", validateToken, getAllChats);
 router.get("/:id", validateToken, getMessages);
 
 // send message
-router.post("/:id", validateToken, chatAttachmentUploader, sendMessageValidator, sendMessageValidationHandler, sendMessage);
+router.post("/:id", validateToken, sendMessageValidator, sendMessageValidationHandler, sendMessage);
 
 export default router;

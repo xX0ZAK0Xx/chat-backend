@@ -18,3 +18,5 @@ export const socketAuth = (socket, next) => {
     next(new Error("Authentication error"));
   }
 };
+
+export default socketAuth;

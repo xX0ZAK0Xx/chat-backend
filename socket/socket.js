@@ -1,4 +1,4 @@
-import { socketAuth } from "../middlewares/auth/authMiddleware";
+import socketAuth from "../middlewares/auth/authMiddleware.js";
 
 export default function socketHandler(io) {
   // apply middleware
